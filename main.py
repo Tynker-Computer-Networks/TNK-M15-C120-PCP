@@ -191,7 +191,7 @@ class SecretSanta(Tk):
             message["Subject"] = subject
             message.attach(MIMEText(msg_body, "plain"))
 
-            # Read the local files and attach as email attachments.
+            # Open and read the local files and attach as email attachments.
             for file_path in self.attached_files:
                 with open(file_path, "rb") as attachment:
                     part = MIMEApplication(
